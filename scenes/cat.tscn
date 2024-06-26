@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bf11lvqq7rv31"]
+[gd_scene load_steps=51 format=3 uid="uid://bf11lvqq7rv31"]
 
 [ext_resource type="Script" path="res://scripts/cat.gd" id="1_qsn5e"]
 [ext_resource type="Texture2D" uid="uid://bjdwppdgsk1jr" path="res://assets/cat/cat05_idle_strip8.png" id="2_331ag"]
@@ -102,19 +102,11 @@ region = Rect2(240, 0, 40, 40)
 atlas = ExtResource("2_331ag")
 region = Rect2(280, 0, 40, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1oick"]
-atlas = ExtResource("3_oo3pa")
-region = Rect2(0, 0, 40, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jb0nu"]
-atlas = ExtResource("3_oo3pa")
-region = Rect2(40, 0, 40, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qmwtu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni541"]
 atlas = ExtResource("3_oo3pa")
 region = Rect2(80, 0, 40, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s33ss"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m53b"]
 atlas = ExtResource("3_oo3pa")
 region = Rect2(120, 0, 40, 40)
 
@@ -217,7 +209,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"fall",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -267,20 +259,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1oick")
+"texture": SubResource("AtlasTexture_ni541")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jb0nu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qmwtu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s33ss")
+"texture": SubResource("AtlasTexture_5m53b")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -344,12 +330,14 @@ animations = [{
 size = Vector2(9.5, 7)
 
 [node name="Cat" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_qsn5e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_63vi8")
-animation = &"run"
+animation = &"land"
 autoplay = "idle"
+frame_progress = 0.549325
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 8.5)

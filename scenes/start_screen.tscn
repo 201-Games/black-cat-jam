@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://s7wvsm7pho6a"]
+[gd_scene load_steps=2 format=3 uid="uid://s7wvsm7pho6a"]
+
+[ext_resource type="PackedScene" uid="uid://c2yn0vdboic71" path="res://scenes/start_screen_tilemap.tscn" id="1_n0iah"]
 
 [node name="StartScreen" type="Node"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_n0iah")]

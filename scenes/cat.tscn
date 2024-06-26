@@ -308,7 +308,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -341,17 +341,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q74sl"]
-size = Vector2(9.5, 8)
+size = Vector2(9.5, 7)
 
 [node name="Cat" type="CharacterBody2D"]
 script = ExtResource("1_qsn5e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_63vi8")
-animation = &"die"
+animation = &"run"
 autoplay = "idle"
-frame_progress = 0.191921
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 9)
+position = Vector2(-2, 8.5)
 shape = SubResource("RectangleShape2D_q74sl")
